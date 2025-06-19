@@ -62,12 +62,12 @@ function ParseContent(ContentID){
 //https://en.wikipedia.org/wiki/Fibonacci_number
 //https://blog.nraboy.com/2015/01/fibonacci-sequence-printed-javascript/
 function  fib(n) {
-    var a = 0, b = 1, f = 1;
+	var a = 1, b = 1, f = 1; //to avoid duplicates, use Fibonacci's approach (skip 0 and the first 1)
 
 	AnswerPhrase += " " + ContentWords[f-1];	
 	Sequence += " " + f;
-	
-    for(var i = 3; i <= n; i++) { //to avoid duplicates, use Fibonacci's approach and start looping at the third number in the sequence (skip 0 and the first 1)
+		
+	for(var i = 2; i <= n; i++) { // continue by iterating from the second number in the sequence
 		//add the previous two numbers in the sequence
 		f = a + b;
 	
@@ -80,11 +80,11 @@ function  fib(n) {
 		AnswerPhrase += " " + ContentWords[f-1]; //Offset by 1 for 0-based array index.
 
 		//prepare for the next iteration
-        a = b;
-        b = f;
-    }
+		a = b;
+		b = f;
+	}
 	//return the fibonacci number for the given input. Can be used if calling the function in a loop.
-    return f;
+	return f;
 };
 
 
