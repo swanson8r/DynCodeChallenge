@@ -67,7 +67,7 @@ function  fib(n) {
 	AnswerPhrase += " " + ContentWords[f-1];	
 	Sequence += " " + f;
 	
-    for(var i = 2; i <= n; i++) { //start looping at the second number in the sequence
+    for(var i = 3; i <= n; i++) { //to avoid duplicates, use Fibonacci's approach and start looping at the third number in the sequence (skip 0 and the first 1)
 		//add the previous two numbers in the sequence
 		f = a + b;
 	
@@ -89,7 +89,7 @@ function  fib(n) {
 
 
 function ShowAnswer(AnswerID) {
-//1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765
+//1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946
 	if (DEBUG > 1) alert("Show Answer");
 
     this.document.getElementById(AnswerID).innerHTML = Sequence + "<BR>\n";
@@ -121,7 +121,7 @@ function Challenge(ContentID,ContentURL,FibNumbers,AnswerID){
 <LI><A target="_new" HREF="http://web.archive.org/web/20111016035323/https://dyn.com/about/careers/hiring-challenges/">(Archived page)</A>
 </UL>
 <LI><A target="_new" HREF="http://www.hatrack.com/osc/stories/enders-game.shtml">Original Source Content</A>
-<LI><A target="_new" HREF="https://kevincantrell.wordpress.com/2011/05/24/hiring-challenge/">Online general solution to Challenge</A>
+<LI><A target="_new" HREF="https://web.archive.org/web/20130223060652/https://kevincantrell.wordpress.com/2011/05/24/hiring-challenge/">(Archived) Blog post discussing the solution</A>
 </UL>
 View Source or Inspect the &lt;HEAD&gt; tag to see my solution in JavaScript.<BR>
 </DIV>			
